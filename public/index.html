@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Roomie — Bütçen uyuyor, peki yaşam tarzın?</title>
+<meta name="description" content="25 soruluk uyum testiyle sana en uygun ev arkadaşlarını gör. Karşılıklı beğeni olmadan mesaj yok. İstanbul, Ankara, İzmir.">
+<meta property="og:title" content="Roomie — Bütçen uyuyor, peki yaşam tarzın?">
+<meta property="og:description" content="25 soruluk uyum testiyle sana en uygun ev arkadaşlarını gör.">
+<meta property="og:image" content="/img/hero_v1.jpg">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--coral:#FF5A5F;--coral-d:#D94146;--navy:#0F1A33;--green:#22C55E;--green-d:#15803D;--mint:#E9FBF3;--mint50:#F2FBF7;--muted:#5A6478;--line:#E4E8F0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--navy);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Sora,sans-serif;letter-spacing:-.02em;line-height:1.1}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block;border-radius:20px}
+.hero-media>img,figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.flags>.wrap>img{width:100%;max-width:900px;margin-left:auto;margin-right:auto;aspect-ratio:4/3;object-fit:cover}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-family:Sora;font-weight:800;font-size:24px;text-decoration:none}
+.brand img{width:38px;height:38px;border-radius:10px}
+.brand span{color:var(--coral)}
+nav a{font-size:15px;font-weight:500;text-decoration:none;margin-left:18px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font:600 16px Inter;border-radius:999px;padding:14px 26px;text-decoration:none}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-primary:hover{background:var(--coral-d)}
+.btn-ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+.hero{background:linear-gradient(160deg,var(--mint) 0%,#fff 55%,#FFF1F1 100%);padding:56px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.badge{display:inline-flex;gap:8px;align-items:center;background:var(--navy);color:#fff;font:600 12px Sora;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:8px 14px}
+.cities{display:inline-block;margin:12px 0 0 0;font-size:14px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+.hero h1{font-size:clamp(40px,6.4vw,72px);font-weight:800;margin:22px 0 18px}
+.hero h1 em{font-style:normal;color:var(--coral)}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 22px}
+.trust{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.trust span::before{content:"✓ ";color:var(--green-d);font-weight:700}
+.hero-media{position:relative}
+.card{position:absolute;left:-24px;bottom:-24px;background:#fff;border-radius:18px;box-shadow:0 12px 40px rgba(15,26,51,.15);padding:16px 18px;min-width:220px;font-size:14px}
+.card .pct{font:800 32px Sora;color:var(--green-d)}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;margin-top:6px}
+.card dt{color:var(--muted)}
+.card small{display:block;margin-top:8px;color:#8A93A6;font-size:11px}
+section{padding:80px 0}
+.eyebrow{font:600 13px Sora;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-d);margin-bottom:12px}
+h2{font-size:clamp(30px,4vw,44px);font-weight:800;margin-bottom:16px}
+.sub{font-size:18px;color:var(--muted);max-width:680px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:36px 0}
+.stat{background:var(--mint50);border-radius:20px;padding:28px}
+.stat b{display:block;font:800 52px Sora;color:var(--coral)}
+.stat p{font-size:17px}
+.stat small{display:block;margin-top:8px;color:#8A93A6;font-size:13px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+figure figcaption{font-size:13px;color:#8A93A6;margin-top:8px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+.step{border:1px solid var(--line);border-radius:20px;padding:24px}
+.step .n{font:800 15px Sora;color:#fff;background:var(--navy);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;margin-bottom:14px}
+.step h3{font-size:19px;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15px}
+.flags{background:var(--navy);color:#fff}
+.flags .sub{color:#C9D1E3}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+.cmp div{border-radius:20px;padding:26px}
+.bad{background:#2A1A24}
+.good{background:#11301F}
+.cmp h3{font-size:20px;margin-bottom:12px}
+.cmp ul{list-style:none;display:grid;gap:10px;font-size:16px;color:#E3E7F0}
+.bad li::before{content:"🚩 "}
+.good li::before{content:"✓ ";color:var(--green)}
+.flags img{margin-top:28px}
+.safe{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.safe div{background:var(--mint50);border-radius:20px;padding:24px}
+.safe h3{font-size:18px;margin-bottom:6px}
+.safe p{color:var(--muted);font-size:15px}
+.note{margin-top:20px;font-weight:600}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font:600 18px Sora;list-style:none}
+summary::after{content:"+";float:right;color:var(--coral)}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px}
+.wl{background:linear-gradient(160deg,var(--mint),#fff)}
+form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:16px;box-shadow:0 12px 40px rgba(15,26,51,.06)}
+label{font-weight:600;font-size:14px;display:grid;gap:6px}
+input[type=email],input[type=text],select{font:16px Inter;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);width:100%}
+.roles{display:grid;gap:10px}
+.roles label{display:flex;gap:12px;align-items:flex-start;border:1.5px solid var(--line);border-radius:14px;padding:14px;font-weight:500;cursor:pointer}
+.roles input{margin-top:4px;accent-color:var(--coral)}
+.roles small{display:block;color:var(--muted)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;color:var(--muted)}
+.consent input{margin-top:3px;accent-color:var(--coral)}
+.msg{font-weight:600;min-height:1.4em}
+.msg.ok{color:var(--green-d)} .msg.err{color:var(--coral-d)}
+.fine{font-size:13px;color:#8A93A6}
+footer{background:var(--navy);color:#C9D1E3;padding:40px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#fff}
+@media (max-width:860px){
+ .hero .wrap,.two,.cmp{grid-template-columns:1fr}
+ .steps{grid-template-columns:1fr 1fr}
+ .safe{grid-template-columns:1fr}
+ .stats{grid-template-columns:1fr}
+ nav{display:none}
+ .card{position:static;margin-top:14px;min-width:0}
+ .card .pct{font-size:28px}
+ section{padding:56px 0}
+}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+.phone{background:#0F1A33;border-radius:44px;padding:10px;box-shadow:0 24px 60px rgba(15,26,51,.25);max-width:300px;margin:0 auto}
+.phone img{border-radius:34px;width:100%;aspect-ratio:auto!important}
+.hero-media{display:flex;justify-content:center}
+.hero-media .phone{transform:rotate(2deg)}
+.screens{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px;align-items:start}
+.screens figure{text-align:center}
+.screens figcaption{font:600 16px Sora;color:var(--navy);margin-top:16px}
+.screens figcaption small{display:block;font:400 14px Inter;color:var(--muted);margin-top:4px}
+.opt{border:1.5px dashed var(--line);border-radius:14px;padding:12px 14px}
+.opt summary{font:600 14px Inter}
+.opt[open]{display:grid;gap:12px}
+.sticky{display:none}
+@media (max-width:860px){.screens{grid-template-columns:1fr;gap:40px}.phone{max-width:260px}
+ .sticky{display:block;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:20;text-align:center;padding:12px 20px;font-size:15px;box-shadow:0 0 0 6px rgba(255,255,255,.9),0 10px 30px rgba(15,26,51,.25)}
+ footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="#"><img src="/img/logo.png" alt="">roomie</a>
+  <button id="lang" type="button" class="btn btn-ghost" style="padding:8px 14px;font-size:14px;margin-left:auto;margin-right:12px" aria-label="Dil / Language">EN</button>
+  <nav><a href="#nasil">Nasıl çalışır?</a><a href="#guvenlik">Güvenlik</a><a href="#sss">SSS</a><a class="btn btn-primary" style="padding:10px 18px;margin-left:18px;color:#fff" href="#liste">Listeye katıl</a></nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg> iOS · App Store'da çok yakında</span><br>
+    <span class="cities">İstanbul · Ankara · İzmir</span>
+    <h1>Bütçen uyuyor,<br><em>peki yaşam tarzın?</em></h1>
+    <p class="lead">25 soruluk uyum testiyle sana en uygun ev arkadaşlarını gör. Karşılıklı beğeni olmadan mesaj yok.</p>
+    <div class="ctas"><a class="btn btn-primary" href="#liste">Bekleme listesine katıl →</a><a class="btn btn-ghost" href="#nasil">Nasıl çalışır?</a></div>
+    <div class="trust"><span>Ücretsiz</span><span>18 yaş ve üzeri</span><span>Karşılıklı beğeni olmadan mesaj yok</span></div>
+  </div>
+  <div class="hero-media" style="display:block">
+    <img src="/img/hero_v1.jpg" alt="İstanbul'da bir mutfakta birlikte kahvaltı hazırlayan ev arkadaşları" width="1600" height="1200">
+    <div class="card"><div class="pct">%87</div><div style="font-size:12px;color:var(--muted);letter-spacing:.08em">ÖRNEK UYUM ORANI</div>
+      <dl><dt>Uyku</dt><dd>23:30 civarı</dd><dt>Temizlik</dt><dd>Orta düzen</dd><dt>Misafir</dt><dd>Nadiren</dd><dt>Bütçe</dt><dd>12.000–15.000 ₺</dd></dl>
+      <small>Test sonucu örneğidir (kurgusal profil).</small></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Neden şimdi?</div>
+  <h2>Kira herkesi bütçeye baktırıyor. Yaşam tarzına bakan yok.</h2>
+  <p class="sub">Ev arkadaşı aramak artık bir tercih değil, zorunluluk. Ama ilanlar sadece rakamı ve semti konuşuyor: kimse saat 02:00'de müzik açılıp açılmadığını sormuyor.</p>
+  <div class="stats">
+    <div class="stat"><b>%449</b><p>İstanbul'da ilan kiraları 4 yılda</p><small>Kaynak: BETAM / sahibindex, Eylül 2022 – Ağustos 2026</small></div>
+    <div class="stat"><b>%34,5</b><p>Yeni kiracı kiraları 1 yılda</p><small>Kaynak: TCMB Yeni Kiracı Kira Endeksi (YKKE), Ağustos 2026</small></div>
+  </div>
+  <div class="two">
+    <figure><img src="/img/tasinma_gunu.jpg" alt="Taşınma günü koli taşıyan öğrenciler" loading="lazy"><figcaption>Taşınma günü: 4 kişi, 6 koli, asansör yok.</figcaption></figure>
+    <div>
+      <p class="sub" style="margin-bottom:12px">Bütçe konuşuluyor: “9.000 TL + faturalar”.<br>Uyku saati konuşulmuyor: “kaçta uyuyorsun?”<br>Bulaşık, ses, misafir ve ortak alan alışkanlıkları hiç sorulmuyor.</p>
+      <h3 style="font-size:24px">İyi ev arkadaşlığı iyi niyetle değil, iyi eşleşmeyle başlar.</h3>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="eyebrow">Uygulamadan</div>
+  <h2>Önce uyum, sonra sohbet.</h2>
+  <div class="screens">
+    <figure><div class="phone"><img src="/img/05-uyum-testi.jpg" alt="Uyum testi ekranı" loading="lazy"></div><figcaption>25 soruluk uyum testi<small>Uyku, temizlik, misafir, bütçe…</small></figcaption></figure>
+    <figure><div class="phone"><img src="/img/01-ev-arkadaslari.jpg" alt="Ev arkadaşları destesi" loading="lazy"></div><figcaption>Uyum yüzdesiyle aday<small>Evi var / evi yok filtresi</small></figcaption></figure>
+    <figure><div class="phone"><img src="/img/03-eslesmeler.jpg" alt="Eşleşmeler ekranı" loading="lazy"></div><figcaption>Karşılıklı beğeni = eşleşme<small>Sohbet ancak o zaman açılır</small></figcaption></figure>
+  </div>
+</div></section>
+
+<section id="nasil" style="background:var(--mint50)"><div class="wrap">
+  <div class="eyebrow">Nasıl çalışır?</div>
+  <h2>Dört adımda uyumlu ev arkadaşı</h2>
+  <p class="sub">Uyum testi 25 soru, yaklaşık 4 dakika sürüyor.</p>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>25 soruyu cevapla</h3><p>Uyku saatinden misafir alışkanlığına, temizlikten bütçe aralığına kadar 25 kısa soru.</p></div>
+    <div class="step"><div class="n">2</div><h3>Uyum yüzdesini gör</h3><p>Cevapların karşılaştırılır; sana en yakın profiller uyum oranıyla sıralanır.</p></div>
+    <div class="step"><div class="n">3</div><h3>Karşılıklı beğen</h3><p>Sen beğen, o da beğensin. Eşleşme yalnızca iki taraf da istediğinde olur.</p></div>
+    <div class="step"><div class="n">4</div><h3>Sohbeti başlat</h3><p>Eşleşince sohbet açılır; ilk mesajı sen at, buluşmayı planla.</p></div>
+  </div>
+  <div class="two" style="margin-top:40px">
+    <figure><img src="/img/kadin_ev_arkadaslari.jpg" alt="Oturma odasında sohbet eden iki ev arkadaşı" loading="lazy"><figcaption>Cuma akşamı: pizza, dizi, iki kişilik kanepe.</figcaption></figure>
+    <div><h3 style="font-size:26px;margin-bottom:10px">İki taraf da beğenmeden mesaj kutusu açılmaz.</h3><p class="sub">İstenmeyen mesaj yok; sadece karşılıklı ilgiyle başlayan sohbetler.</p></div>
+  </div>
+</div></section>
+
+<section class="flags"><div class="wrap">
+  <div class="eyebrow" style="color:var(--coral)">Kırmızı bayrak</div>
+  <h2>Aynı bütçe, iki farklı ev.</h2>
+  <p class="sub">Sorun karakter değil; baştan konuşulmayan detaylar.</p>
+  <div class="cmp">
+    <div class="bad"><h3>Dağınık ev</h3><ul><li>Bulaşık üç gündür lavaboda, kimse sahiplenmiyor.</li><li>Gece 03:00'te hoparlör açılıyor, “ben böyleyim” deniyor.</li><li>Kira günü her ay sürpriz oluyor.</li><li>Ortak alan kimsenin alanı değil.</li><li>İlk mesaj: “selam”. İkinci mesaj: yok.</li></ul></div>
+    <div class="good"><h3>Uyumlu ev</h3><ul><li>Temizlik sırası buzdolabında yazıyor, kimse tripli değil.</li><li>Sessiz saatler ilk hafta konuşulmuş: 23:00–08:00.</li><li>Kira ve faturalar testte belliydi, sürpriz yok.</li><li>Ortak alan ortak: masayı en son kalkan toplar.</li><li>İlk mesajdan itibaren net iletişim.</li></ul></div>
+  </div>
+  <img src="/img/kirmizi_bayrak_split.jpg" alt="Dağınık ve düzenli mutfak karşılaştırması" loading="lazy">
+</div></section>
+
+<section id="guvenlik"><div class="wrap">
+  <div class="eyebrow">Güvenlik</div>
+  <h2>Güven, ilk mesajdan önce başlar.</h2>
+  <p class="sub">Ev arkadaşı ararken rahat olman gerekiyor. Uygulamada bunlar standart:</p>
+  <div class="safe">
+    <div><h3>E-posta doğrulaması</h3><p>Hesap açan herkes e-posta adresini doğrular.</p></div>
+    <div><h3>Fotoğraflar otomatik taranır</h3><p>Yüklediğin görseller profiline eklenmeden önce otomatik taramadan geçer.</p></div>
+    <div><h3>Karşılıklı beğeni şartı</h3><p>İki taraf da beğenmeden mesaj gönderilemez.</p></div>
+    <div><h3>Şikâyet et ve engelle</h3><p>Rahatsız eden bir profil için tek dokunuşla şikâyet et ve engelle.</p></div>
+    <div><h3>Sohbette güvenlik notu</h3><p>Her sohbetin başında kapora ve ödeme dolandırıcılığına karşı bir güvenlik notu görürsün.</p></div>
+    <div><h3>Hesabını sil</h3><p>İstediğin an hesabını uygulama içinden silebilirsin.</p></div>
+  </div>
+  <p class="note">Tek kural: kapora gibi ödemeleri evi görmeden ve uygulama dışında yapma.</p>
+</div></section>
+
+<section id="sss" style="background:var(--mint50)"><div class="wrap" style="max-width:820px">
+  <div class="eyebrow">SSS</div>
+  <h2>Merak edilenler</h2>
+  <details><summary>Roomie ücretli mi?</summary><p>Hayır, Roomie ücretsiz.</p></details>
+  <details><summary>Hangi şehirlerde var?</summary><p>İstanbul, Ankara ve İzmir.</p></details>
+  <details><summary>Kaç yaşından itibaren kullanabilirim?</summary><p>Roomie 18 yaş ve üzeri kullanıcılar içindir.</p></details>
+  <details><summary>Uyum testi kaç soru, ne kadar sürüyor?</summary><p>25 soru, yaklaşık 4 dakika. Doğru ya da yanlış cevap yok. Uyum yüzdesi bir eşleştirme göstergesidir, garanti değildir.</p></details>
+  <details><summary>Verilerim nasıl kullanılıyor?</summary><p>Doğum tarihin ve e-posta adresin diğer kullanıcılarla paylaşılmaz. Ayrıntılar: <a href="https://roomieapp.site/privacy">Gizlilik ve KVKK</a>.</p></details>
+  <details><summary>App Store'a ne zaman gelecek?</summary><p>Uygulama App Store incelemesinde. Bekleme listesine katılırsan yayın günü ilk sen haber alırsın.</p></details>
+  <p style="margin-top:20px" class="fine">Sorun mu var, öneri mi? <a href="mailto:support@roomieapp.site">support@roomieapp.site</a></p>
+</div></section>
+
+<section id="liste" class="wl"><div class="wrap two">
+  <div>
+    <div class="eyebrow">Bekleme listesi</div>
+    <h2>Bekleme listesine katıl, ilk sen gör.</h2>
+    <p class="sub">Yayın günü daveti ilk sıradakilere gönderiyoruz. Lansman dışında e-posta göndermiyoruz.</p>
+    <ul style="margin:20px 0 0 18px;color:var(--muted);display:grid;gap:6px">
+      <li>Bilgiler yalnızca şehir/ilçe yoğunluğunu planlamak ve lansman haberini göndermek için kullanılır.</li>
+      <li>Kişisel verilerin yayımlanmaz; yalnızca toplu sayılar kullanılır.</li>
+      <li>Listeden her zaman çıkabilirsin: <a href="mailto:support@roomieapp.site">support@roomieapp.site</a></li>
+    </ul>
+    <p style="margin-top:20px;font:700 18px Sora" id="count"></p>
+  </div>
+  <form id="wl" novalidate>
+    <label>E-posta *<input type="email" name="email" required autocomplete="email" placeholder="ornek@mail.com"></label>
+    <label>Şehir *<select name="city" required><option value="">Şehir seç</option><option value="İstanbul">İstanbul</option><option value="Ankara">Ankara</option><option value="İzmir">İzmir</option></select></label>
+    <details class="opt"><summary>İlçe ve üniversite ekle (opsiyonel)</summary>
+    <label>İlçe<input type="text" name="district" maxlength="60" placeholder="ör. Kadıköy"></label>
+    <label>Üniversite<select name="university"><option value="">Üniversite seç</option></select></label></details>
+    <div><div style="font-weight:600;font-size:14px;margin-bottom:6px">Sen hangisisin? *</div>
+      <div class="roles">
+        <label><input type="radio" name="role" value="host" required><span>Evim var<small>Boş odam var, ev arkadaşı arıyorum.</small></span></label>
+        <label><input type="radio" name="role" value="seeker"><span>Ev arıyorum<small>Oda ya da eve taşınmak istiyorum.</small></span></label>
+        <label><input type="radio" name="role" value="co"><span>Birlikte ev arayacağız<small>Yeni bir evi birlikte tutalım.</small></span></label>
+      </div></div>
+    <label class="consent"><input type="checkbox" name="consent" required><span>Bekleme listesi için verdiğim bilgilerin işlenmesine onay veriyorum. Ayrıntılar: <a href="https://roomieapp.site/privacy" target="_blank" rel="noopener">Gizlilik ve KVKK</a>.</span></label>
+    <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+    <button class="btn btn-primary" type="submit">Listeye katıl</button>
+    <div class="msg" id="msg" role="status" aria-live="polite"></div>
+  </form>
+</div></section>
+</main>
+<a class="btn btn-primary sticky" href="#liste" id="stk">Bekleme listesine katıl →</a>
+
+<footer><div class="wrap">
+  <div><b style="color:#fff;font-family:Sora">roomie</b> · Skymoon Studios · 18+</div>
+  <div><a href="https://instagram.com/roomieapp.site" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@roomieapp.site</a> · <a href="https://roomieapp.site/privacy">Gizlilik ve KVKK</a> · <a href="https://roomieapp.site/terms">Kullanım Koşulları</a> · <a href="mailto:support@roomieapp.site">support@roomieapp.site</a></div>
+</div></footer>
+
+<script src="/i18n.js?v=2"></script>
+<script>
+const UNI={"İstanbul":["Boğaziçi Üniversitesi","İstanbul Teknik Üniversitesi","Koç Üniversitesi","Yeditepe Üniversitesi","Marmara Üniversitesi","İstanbul Üniversitesi","Yıldız Teknik Üniversitesi","Sabancı Üniversitesi","Bilgi Üniversitesi","Galatasaray Üniversitesi","Özyeğin Üniversitesi","Bahçeşehir Üniversitesi"],"Ankara":["ODTÜ","Bilkent Üniversitesi","Hacettepe Üniversitesi","Ankara Üniversitesi","Gazi Üniversitesi","TOBB ETÜ"],"İzmir":["Ege Üniversitesi","Dokuz Eylül Üniversitesi","İzmir Yüksek Teknoloji Enstitüsü","İzmir Ekonomi Üniversitesi","Yaşar Üniversitesi"]};
+const f=document.getElementById('wl'), msg=document.getElementById('msg'), uni=f.university;
+const fillUni=()=>{const c=f.city.value, cs=c?[c]:Object.keys(UNI);
+ uni.innerHTML=`<option value="">${LANG==='en'?'Choose a university':'Üniversite seç'}</option>`+cs.map(k=>`<optgroup label="${k}">${UNI[k].map(u=>`<option>${u}</option>`).join('')}</optgroup>`).join('')+(LANG==='en'?'<optgroup label="Other"><option value="Diğer (listede yok)">Other (not listed)</option><option value="Üniversiteyle ilgim yok / mezunum">Not a student / graduated</option></optgroup>':'<optgroup label="Diğer"><option>Diğer (listede yok)</option><option>Üniversiteyle ilgim yok / mezunum</option></optgroup>');};
+fillUni(); f.city.addEventListener('change',fillUni); window.addEventListener('langchange',()=>{fillUni();loadCount();});
+async function loadCount(){try{const r=await fetch('/api/waitlist');const j=await r.json();if(j.total>0)document.getElementById('count').textContent=t('count')(j.total);}catch(e){}}
+loadCount();
+const stk=document.getElementById('stk'),vis=new Set();const io=new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?vis.add(e.target):vis.delete(e.target));stk.style.display=vis.size?'none':''});io.observe(document.getElementById('liste'));io.observe(document.querySelector('.hero .ctas'));
+f.addEventListener('submit',async e=>{e.preventDefault();msg.className='msg';
+ const d=Object.fromEntries(new FormData(f)); d.consent=f.consent.checked;
+ if(!/^\S+@\S+\.\S+$/.test(d.email||'')){msg.className='msg err';msg.textContent=t('email');return;}
+ if(!d.city){msg.className='msg err';msg.textContent=t('city');return;}
+ if(!d.role){msg.className='msg err';msg.textContent=t('role');return;}
+ if(!d.consent){msg.className='msg err';msg.textContent=t('consent');return;}
+ const b=f.querySelector('button');b.disabled=true;b.textContent=t('sending');
+ try{const r=await fetch('/api/waitlist',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(d)});const j=await r.json();
+  if(r.ok){msg.className='msg ok';msg.textContent=t('ok');f.reset();loadCount();}
+  else{msg.className='msg err';msg.textContent=LANG==='en'?t('fail'):(j.error||t('fail'));}
+ }catch(err){msg.className='msg err';msg.textContent=t('net');}
+ b.disabled=false;b.textContent=t('submit');});
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+name = "roomie-launch"
+pages_build_output_dir = "public"
+compatibility_date = "2026-09-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "roomie-waitlist"
+database_id = "780d72e0-09ef-4e63-8606-6a3d0527d6fb"

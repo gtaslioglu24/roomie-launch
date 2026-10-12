@@ -1,0 +1,8 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Roomie Bekleme Listesi</title><meta name="robots" content="noindex">
+<style>body{font-family:Inter,system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#0F1A33}h1{font-size:28px}.big{font-size:56px;font-weight:800;color:#FF5A5F}.bar{display:flex;align-items:center;gap:10px;margin:6px 0}.bar span{width:220px}.bar i{height:14px;background:#22C55E;border-radius:8px;display:block}section{margin-top:28px}</style></head>
+<body><h1>Roomie · Bekleme listesi</h1><p>Yalnızca toplu sayılar. 30 sn'de bir yenilenir.</p><div class="big" id="t">–</div>
+<section><h3>Şehir</h3><div id="c"></div></section><section><h3>Rol</h3><div id="r"></div></section><section><h3>Üniversite</h3><div id="u"></div></section>
+<script>const L={host:'Evim var',seeker:'Ev arıyorum',co:'Birlikte ev arayacağız'};
+const draw=(id,rows,m)=>{document.getElementById(id).innerHTML=rows.length?rows.map(x=>`<div class="bar"><span>${(L[x.k]||x.k)}</span><i style="width:${Math.max(4,x.n/m*300)}px"></i><b>${x.n}</b></div>`).join(''):'Henüz kayıt yok.'};
+async function go(){const s=await (await fetch('/api/stats')).json();document.getElementById('t').textContent=s.total+' kayıt';const m=Math.max(1,s.total);draw('c',s.byCity,m);draw('r',s.byRole,m);draw('u',s.byUniversity,m);}
+go();setInterval(go,30000);</script></body></html>
