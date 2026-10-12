@@ -1,7 +1,7 @@
 # Roomie: Launch Machine
 **10X Your Brand Hackathon · Istanbul Ignited by Slush'D · Manus AI · 12 Oct 2026**
 
-Roomie is an iOS roommate-matching app (25-question compatibility test, match score, no messages without a mutual like), currently in App Store review. In 5.5 hours we turned it from "product ready, no launch" into a launch-ready brand with Manus, Apify and fal.ai.
+Roomie is an iOS roommate-matching app (25-question compatibility test, match score, no messages without a mutual like), currently in App Store review. In 5.5 hours I turned it from "product ready, no launch" into a launch-ready brand with Manus, Apify and fal.ai.
 
 **Live:** https://app.roomieapp.site (TR/EN, auto by device language) · **Instagram:** [@roomieapp.site](https://instagram.com/roomieapp.site)
 
